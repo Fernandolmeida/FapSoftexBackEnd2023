@@ -1,0 +1,117 @@
+Atividade:
+
+Com base no que estudamos, escolhemos dois objetos materiais e dois abstratos. Em seguida, fa�a uma lista com, pelo menos, tr�s atributos e tr�s m�todos para cada tipo de objeto. Para finalizar, demonstre esses objetos em JavaScript e exemplifique suas caracter�sticas e a��es.
+
+Resposta:
+
+Objetos Materiais
+pessoa
+M�todos:
+andar(Faz a pessoa andar)
+falar(Faz a pessoa falar)
+comer(Faz a pessoa comer)
+C�digo
+const pessoa = {
+  nome: "Jo�o",
+  idade: 30,
+  sexo: "masculino",
+
+  andar() {
+    console.log("A pessoa est� andando.");
+  },
+
+  falar() {
+    console.log("A pessoa est� falando.");
+  },
+
+  comer() {
+    console.log("A pessoa est� comendo.");
+  },
+};
+
+pessoa.andar(); // A pessoa est� andando.
+pessoa.falar(); // A pessoa est� falando.
+pessoa.comer(); // A pessoa est� comendo.
+
+carro
+M�todos:
+ligar o carro
+desligar(desliga o carro)
+acelerar(Acelera o carro)
+C�digo
+const carro = {
+  marca: "Ford",
+  modelo: "Focus",
+  ano: 2023,
+
+  ligar() {
+    console.log("O carro est� ligado.");
+  },
+
+  desligar() {
+    console.log("O carro est� desligado.");
+  },
+
+  acelerar() {
+    console.log("O carro est� acelerando.");
+  },
+};
+
+carro.ligar(); // O carro est� ligado.
+carro.desligar(); // O carro est� desligado.
+carro.acelerar(); // O carro est� acelerando.
+
+Objetos abstratos
+C�lculo matem�tico
+M�todos:
+somar(Soma dois n�meros)
+subtrair(Subtrai dois n�meros)
+multiplicar(Multiplica dois n�meros)
+C�digo
+function soma(a, b) {
+  return a + b;
+}
+
+function subtrair(a, b) {
+  return a - b;
+}
+
+function multiplicar(a, b) {
+  return a * b;
+}
+
+console.log(soma(10, 20)); // 30
+console.log(subtrair(10, 20)); // -10
+console.log(multiplicar(10, 20)); // 200
+
+Forma geom�trica
+M�todos:
+calcularArea(Calcula a �rea da forma)
+calcularPerimetro(Calcula o per�metro da forma)
+desenhar(Desenha a forma)
+C�digo
+function quadrado(lado) {
+  return {
+    lado: lado,
+    area: lado * lado,
+    perimetro: 4 * lado,
+
+    calcularArea() {
+      return this.area;
+    },
+
+    calcularPerimetro() {
+      return this.perimetro;
+    },
+
+    desenhar() {
+      console.log("Desenhando um quadrado com lado de " + this.lado);
+    },
+  };
+}
+
+const quadrado = quadrado(10);
+
+console.log(quadrado.calcularArea()); // 100
+console.log(quadrado.calcularPerimetro()); // 40
+quadrado.desenhar(); // Desenhando um quadrado com lado de 10
